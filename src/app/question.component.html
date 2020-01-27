@@ -2,20 +2,24 @@
   <mat-expansion-panel>
     <mat-expansion-panel-header>
       <mat-panel-title>
-        Personal data
+       What is a module?
       </mat-panel-title>
-      <mat-panel-description>
-        Type your name and age
-      </mat-panel-description>
     </mat-expansion-panel-header>
+    Modules are logical boundaries in your application and the application is divided into separate modules to separate the functionality of your application. Lets take an example of app.module.ts root module declared with @NgModule decorator as below,
+         
+ <!--import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent }  from './app.component';
 
-    <mat-form-field>
-      <input matInput placeholder="First name">
-    </mat-form-field>
+@NgModule ({
+   imports:      [ BrowserModule ],
+   declarations: [ AppComponent ],
+   bootstrap:    [ AppComponent ]
+})
+export class AppModule { } -->
 
-    <mat-form-field>
-      <input matInput placeholder="Age">
-    </mat-form-field>
+
+
+
   </mat-expansion-panel>
   <mat-expansion-panel (opened)="panelOpenState = true"
                        (closed)="panelOpenState = false">
@@ -23,10 +27,6 @@
       <mat-panel-title>
         Self aware panel
       </mat-panel-title>
-      <mat-panel-description>
-        Currently I am {{panelOpenState ? 'open' : 'closed'}}
-      </mat-panel-description>
     </mat-expansion-panel-header>
-    <p>I'm visible because I am open</p>
   </mat-expansion-panel>
 </mat-accordion>
